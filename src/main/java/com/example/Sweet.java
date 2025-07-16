@@ -1,8 +1,5 @@
 package com.example;
 
-/**
- * Sweet class represents a sweet item in the shop.
- */
 public class Sweet {
     private int id;
     private String name;
@@ -18,7 +15,6 @@ public class Sweet {
         this.quantity = quantity;
     }
 
-    // Getters
     public int getId() {
         return id;
     }
@@ -39,7 +35,6 @@ public class Sweet {
         return quantity;
     }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -54,5 +49,13 @@ public class Sweet {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+            "ID: %d | Name: %s | Category: %s | Price: %.2f | Quantity: %d",
+            id, name, category, price, quantity
+        );
     }
 }

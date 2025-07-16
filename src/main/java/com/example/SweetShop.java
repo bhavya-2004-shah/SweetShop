@@ -3,9 +3,7 @@ package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * SweetShop class manages sweet inventory.
- */
+
 public class SweetShop {
     private List<Sweet> sweets;
 
@@ -19,5 +17,8 @@ public class SweetShop {
 
     public List<Sweet> getAllSweets() {
         return sweets;
+    }
+    public void deleteSweet(int id) {
+    sweets.removeIf(s -> s.getId() == id);
     }
 }
