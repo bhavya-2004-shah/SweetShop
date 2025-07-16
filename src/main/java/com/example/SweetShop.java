@@ -2,6 +2,7 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class SweetShop {
@@ -21,4 +22,10 @@ public class SweetShop {
     public void deleteSweet(int id) {
     sweets.removeIf(s -> s.getId() == id);
     }
+    public List<Sweet> searchByName(String name) {
+    return sweets.stream()
+            .filter(s -> s.getName().equalsIgnoreCase(name))
+            .collect(Collectors.toList());
+}
+
 }
