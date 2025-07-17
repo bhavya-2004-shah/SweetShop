@@ -56,7 +56,7 @@ public void testSearchByName_NotFound() {
     List<Sweet> result = shop.searchByName("Rasgulla");
     assertEquals(0, result.size());
 }
-
+// for update 
 @Test
 public void testUpdateSweet() {
     SweetShop shop = new SweetShop();
@@ -72,7 +72,7 @@ public void testUpdateSweet() {
     assertEquals(60.0, resultSweet.getPrice(), 0.01);
     assertEquals(25, resultSweet.getQuantity());
 }
-
+//for purchase 
 @Test
 public void testPurchaseSweet_Success() {
     SweetShop shop = new SweetShop();
@@ -84,7 +84,7 @@ public void testPurchaseSweet_Success() {
     assertTrue(result);
     assertEquals(5, sweet.getQuantity());
 }
-
+// for purchase error handle 
 @Test
 public void testPurchaseSweet_InsufficientStock() {
     SweetShop shop = new SweetShop();
@@ -96,6 +96,17 @@ public void testPurchaseSweet_InsufficientStock() {
     assertFalse(result);
     assertEquals(3, sweet.getQuantity()); 
 }
+//for restock 
+@Test
+public void testRestockSweet() {
+    SweetShop shop = new SweetShop();
+    Sweet sweet = new Sweet(1, "Soan Papdi", "Flour-Based", 25.0, 10);
+    shop.addSweet(sweet);
 
+    boolean result = shop.restockSweet(1, 15);
+
+    assertTrue(result);
+    assertEquals(25, sweet.getQuantity());
+}
 
 }

@@ -23,6 +23,8 @@ public class SweetShopApp {
             System.out.println("5. Sort sweets");
             System.out.println("6. Update sweet by ID");
 System.out.println("7. Purchase sweet");  
+System.out.println("8. Restock sweet"); 
+
 
 
             System.out.println("0. Exit");
@@ -105,7 +107,7 @@ System.out.println("7. Purchase sweet");
         System.out.println("Sweet with ID " + updateId + " not found.");
     }
     break;
-    
+
     case 7:
     System.out.print("Enter sweet ID to purchase: ");
     int purchaseId = Integer.parseInt(scanner.nextLine());
@@ -121,6 +123,23 @@ System.out.println("7. Purchase sweet");
         System.out.println("Purchase failed.");
     }
     break;
+
+    case 8:
+    System.out.print("Enter sweet ID to restock: ");
+    int restockId = Integer.parseInt(scanner.nextLine());
+
+    System.out.print("Enter quantity to add: ");
+    int restockQty = Integer.parseInt(scanner.nextLine());
+
+    boolean restocked = shop.restockSweet(restockId, restockQty);
+
+    if (restocked) {
+        System.out.println("Restock successful!");
+    } else {
+        System.out.println("Restock failed.");
+    }
+    break;
+
 
 
 

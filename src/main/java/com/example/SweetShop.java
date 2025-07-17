@@ -69,7 +69,7 @@ public boolean updateSweet(int id, Sweet updatedSweet) {
             return true;
         }
     }
-    return false; // Sweet with given ID not found
+    return false; 
 }
 public boolean purchaseSweet(int id, int quantity) {
     for (Sweet sweet : sweets) {
@@ -81,6 +81,16 @@ public boolean purchaseSweet(int id, int quantity) {
                 System.out.println("Not enough stock available. Current stock: " + sweet.getQuantity());
                 return false;
             }
+        }
+    }
+    System.out.println("Sweet with ID " + id + " not found.");
+    return false;
+}
+public boolean restockSweet(int id, int quantityToAdd) {
+    for (Sweet sweet : sweets) {
+        if (sweet.getId() == id) {
+            sweet.setQuantity(sweet.getQuantity() + quantityToAdd);
+            return true;
         }
     }
     System.out.println("Sweet with ID " + id + " not found.");
