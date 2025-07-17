@@ -59,5 +59,19 @@ public List<Sweet> sortSweets(String criteria, boolean ascending) {
     return sortedList;
 }
 
+public boolean updateSweet(int id, Sweet updatedSweet) {
+    for (Sweet sweet : sweets) {
+        if (sweet.getId() == id) {
+            sweet.setName(updatedSweet.getName());
+            sweet.setCategory(updatedSweet.getCategory());
+            sweet.setPrice(updatedSweet.getPrice());
+            sweet.setQuantity(updatedSweet.getQuantity());
+            return true;
+        }
+    }
+    return false; // Sweet with given ID not found
+}
+
+
 
 }

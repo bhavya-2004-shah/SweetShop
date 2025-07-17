@@ -21,6 +21,8 @@ public class SweetShopApp {
             System.out.println("3. Delete sweet by ID");
             System.out.println("4. Search sweet by name");
             System.out.println("5. Sort sweets");
+            System.out.println("6. Update sweet by ID");
+
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
             
@@ -78,6 +80,30 @@ public class SweetShopApp {
                     System.out.println("Sweets sorted by " + criteria + ":");
                     printSweets(sortedSweets);
                     break;
+
+                    case 6:
+    System.out.print("Enter sweet ID to update: ");
+    int updateId = Integer.parseInt(scanner.nextLine());
+
+    System.out.print("Enter new name: ");
+    String newName = scanner.nextLine();
+    System.out.print("Enter new category: ");
+    String newCategory = scanner.nextLine();
+    System.out.print("Enter new price: ");
+    double newPrice = Double.parseDouble(scanner.nextLine());
+    System.out.print("Enter new quantity: ");
+    int newQuantity = Integer.parseInt(scanner.nextLine());
+
+    Sweet updatedSweet = new Sweet(updateId, newName, newCategory, newPrice, newQuantity);
+    boolean updated = shop.updateSweet(updateId, updatedSweet);
+
+    if (updated) {
+        System.out.println("Sweet updated successfully!");
+    } else {
+        System.out.println("Sweet with ID " + updateId + " not found.");
+    }
+    break;
+
 
                 case 0:
                     System.out.println("Exiting... Goodbye!");

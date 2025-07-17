@@ -57,5 +57,20 @@ public void testSearchByName_NotFound() {
     assertEquals(0, result.size());
 }
 
+@Test
+public void testUpdateSweet() {
+    SweetShop shop = new SweetShop();
+    Sweet sweet = new Sweet(1, "Kaju Katli", "Nut-Based", 50.0, 20);
+    shop.addSweet(sweet);
+
+    Sweet updated = new Sweet(1, "Badam Katli", "Nut-Based", 60.0, 25);
+    boolean result = shop.updateSweet(1, updated);
+
+    assertTrue(result);
+    Sweet resultSweet = shop.getAllSweets().get(0);
+    assertEquals("Badam Katli", resultSweet.getName());
+    assertEquals(60.0, resultSweet.getPrice(), 0.01);
+    assertEquals(25, resultSweet.getQuantity());
+}
 
 }
