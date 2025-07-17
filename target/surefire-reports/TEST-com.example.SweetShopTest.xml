@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.SweetShopTest" time="0.069" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.SweetShopTest" time="0.072" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.14.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\shahb\AppData\Local\Temp\surefire11251917511555237169\surefirebooter12382034300668877592.jar C:\Users\shahb\AppData\Local\Temp\surefire11251917511555237169 2025-07-17T16-34-16_726-jvmRun1 surefire8728781321530426368tmp surefire_013774867157219724843tmp"/>
+    <property name="sun.java.command" value="C:\Users\shahb\AppData\Local\Temp\surefire9086985783966941553\surefirebooter15848933610915468212.jar C:\Users\shahb\AppData\Local\Temp\surefire9086985783966941553 2025-07-17T16-38-28_132-jvmRun1 surefire2560131872703356371tmp surefire_08707254750214202452tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\shahb\OneDrive\Desktop\Infolabz\katha\target\test-classes;C:\Users\shahb\OneDrive\Desktop\Infolabz\katha\target\classes;C:\Users\shahb\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\shahb\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\shahb\AppData\Local\Temp\surefire11251917511555237169\surefirebooter12382034300668877592.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\shahb\AppData\Local\Temp\surefire9086985783966941553\surefirebooter15848933610915468212.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7"/>
@@ -58,9 +58,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testDeleteSweet" classname="com.example.SweetShopTest" time="0.011"/>
+  <testcase name="testDeleteSweet" classname="com.example.SweetShopTest" time="0.012"/>
+  <testcase name="testPurchaseSweet_InsufficientStock" classname="com.example.SweetShopTest" time="0"/>
   <testcase name="testUpdateSweet" classname="com.example.SweetShopTest" time="0"/>
   <testcase name="testAddSweet" classname="com.example.SweetShopTest" time="0"/>
   <testcase name="testSearchByName_NotFound" classname="com.example.SweetShopTest" time="0"/>
   <testcase name="testSearchByName_Found" classname="com.example.SweetShopTest" time="0"/>
+  <testcase name="testPurchaseSweet_Success" classname="com.example.SweetShopTest" time="0"/>
 </testsuite>

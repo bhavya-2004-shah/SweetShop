@@ -22,6 +22,8 @@ public class SweetShopApp {
             System.out.println("4. Search sweet by name");
             System.out.println("5. Sort sweets");
             System.out.println("6. Update sweet by ID");
+System.out.println("7. Purchase sweet");  
+
 
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
@@ -103,6 +105,23 @@ public class SweetShopApp {
         System.out.println("Sweet with ID " + updateId + " not found.");
     }
     break;
+    
+    case 7:
+    System.out.print("Enter sweet ID to purchase: ");
+    int purchaseId = Integer.parseInt(scanner.nextLine());
+
+    System.out.print("Enter quantity to purchase: ");
+    int purchaseQty = Integer.parseInt(scanner.nextLine());
+
+    boolean purchased = shop.purchaseSweet(purchaseId, purchaseQty);
+
+    if (purchased) {
+        System.out.println("Purchase successful!");
+    } else {
+        System.out.println("Purchase failed.");
+    }
+    break;
+
 
 
                 case 0:

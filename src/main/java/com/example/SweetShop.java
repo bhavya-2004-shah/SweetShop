@@ -71,6 +71,21 @@ public boolean updateSweet(int id, Sweet updatedSweet) {
     }
     return false; // Sweet with given ID not found
 }
+public boolean purchaseSweet(int id, int quantity) {
+    for (Sweet sweet : sweets) {
+        if (sweet.getId() == id) {
+            if (sweet.getQuantity() >= quantity) {
+                sweet.setQuantity(sweet.getQuantity() - quantity);
+                return true;
+            } else {
+                System.out.println("Not enough stock available. Current stock: " + sweet.getQuantity());
+                return false;
+            }
+        }
+    }
+    System.out.println("Sweet with ID " + id + " not found.");
+    return false;
+}
 
 
 

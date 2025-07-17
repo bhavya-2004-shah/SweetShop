@@ -73,4 +73,29 @@ public void testUpdateSweet() {
     assertEquals(25, resultSweet.getQuantity());
 }
 
+@Test
+public void testPurchaseSweet_Success() {
+    SweetShop shop = new SweetShop();
+    Sweet sweet = new Sweet(1, "Rasgulla", "Milk-Based", 15.0, 10);
+    shop.addSweet(sweet);
+
+    boolean result = shop.purchaseSweet(1, 5);
+
+    assertTrue(result);
+    assertEquals(5, sweet.getQuantity());
+}
+
+@Test
+public void testPurchaseSweet_InsufficientStock() {
+    SweetShop shop = new SweetShop();
+    Sweet sweet = new Sweet(2, "Barfi", "Milk-Based", 20.0, 3);
+    shop.addSweet(sweet);
+
+    boolean result = shop.purchaseSweet(2, 5);
+
+    assertFalse(result);
+    assertEquals(3, sweet.getQuantity()); 
+}
+
+
 }
